@@ -1,0 +1,513 @@
+.search-box {
+    top: 50%;
+    left: 50%;  
+    background: #ffffff;
+    height: 50px;
+    padding:10px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    }
+    ::-webkit-input-placeholder {
+    font-size: 17px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #aeaeae;
+    }
+    .search-text {
+    background: none;
+    border: none;
+    outline: 0;
+    color: #f05; 
+    padding: 0;
+    line-height: 40px;
+    font-size: 16px;
+    width: 0; 
+    transition: 0.4s;
+    
+    }
+    #teste {
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        width: 100%;
+        flex-wrap:wrap ;
+        gap: 100px 0px;
+    }
+ 
+    .search-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:  #ff3838;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    }
+    .loupe-white {
+    display: none;
+    
+    }
+    .search-box:hover > .search-text {
+    width: 240px;
+    padding: 0 6px;
+    
+    }
+    
+    .search-box:hover > .search-btn {
+    background: #f7aeae;
+    
+    }
+    .search-box > .search-btn .loupe-blue {
+    display: none;
+    }
+    .search-box > .search-btn .loupe-white {
+    display: block;
+    }
+.search-box {
+    margin-left: 60%
+}
+header {
+    background-color:#fffcfc;
+    color:rgb(255, 255, 255);
+    text-align:center;
+    height: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+header h1 {
+    text-align: center;
+    margin-left: 5%;
+    font-family:'Times New Roman', Times, serif;
+}
+   .lo { 
+    width: 100px;
+ margin-right: 5%;
+}
+.pro {
+   
+    width: 60px;
+}
+#usu {
+    width: 63px; 
+}
+.wh{
+    width: 30px;
+ 
+}
+.ins {
+    width: 25px;
+}
+img {
+    width: 20px;
+}
+#botao-sacola {
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    background-color: #ff3838;
+    height: 45px;
+    width: 170px;
+    color: #ffffff;
+    border-radius: 25px;
+    font-size: 10pt; 
+    margin-right: 3%;
+    margin-left: 2%;
+   
+}
+#sacola-img {
+    width: 47px;
+   
+  
+}
+
+.ev {
+    font-size: 23pt;
+}
+.local{ 
+    width: 35px;
+    margin-left: 2%;  
+    margin-right:2% ;
+    
+
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.mediaCard {
+   transition: transform 0.3s;
+ }
+ .mediaCard:hover {
+   transform: scale(0.9);
+   }
+
+ .mediaCard2:hover {
+   transform: scale(0.9);
+   }
+.mediaCard6 {
+   transition: transform 0.3s;
+ }
+
+ .mediaCard6:hover {
+   transform: scale(0.9);
+   }
+
+   .mediaCard5 {
+       transition: transform 0.3s;
+     }
+
+     .mediaCard5:hover {
+       transform: scale(0.9);
+       }
+       .mediaCard4 {
+           transition: transform 0.3s;
+         }
+   
+         .mediaCard4:hover {
+           transform: scale(0.9);
+           }
+           .mediaCard3 {
+               transition: transform 0.3s;
+             }
+       
+             .mediaCard3:hover {
+               transform: scale(0.9);
+               }
+    nav{
+        line-height:50px;
+    background-color:rgb(255, 187, 187);
+    height:2100px;
+    width:150px;
+    float:left;
+    padding:5px;	
+    font-size: 15pt;
+    text-align: center;
+    }
+    nav ul li:hover {
+        background-color: #faeded;
+        border-radius: 20%;
+        text-align: center;
+
+    }
+    h2 {
+        background-color:#ff6c6c;
+        font-family:'Courier New', Courier, monospace;
+        text-align: center;
+        margin-top: 10%;
+        font-size: 30pt;
+        width: 100%;
+        height: 5vh;
+           }
+  
+    .texto {
+        text-align: left;
+        font-size: 15pt;
+
+    }
+    .bottonText {
+        text-align: left;
+        font-size: 20pt;
+    }
+
+    .card4 {
+        background: #fff;
+        box-shadow: 0px 2px 15px #000;  
+        border-radius: 20px;
+        width: 300px ;
+        height: 560px;
+       
+    }
+    .mediaCard4 {
+        background: url("https://cdn.awsli.com.br/2500x2500/934/934817/produto/186105574/27177f7331.jpg") center/cover;
+        height: 300px;   
+        width: 300px;
+        border-radius: 20px; 
+     }
+    
+     .bottoCard4 {
+       padding: 20px; 
+     }
+    .actions4:hover {
+        background-color: rgb(31, 187, 31);
+    }
+    .actions4 {
+       background-color: green;
+       color: #fff;
+       width: 260px;
+       border-radius: 15px;
+       height: 30px;
+    }
+    .bottonText4 {
+        text-align: left;
+        font-size: 15pt;
+    }
+    .card5 {
+        background: #fff;
+        box-shadow: 0px 2px 15px #000;  
+        border-radius: 20px;
+        width: 300px ;
+        height: 560px;
+        margin-left:5%;
+    }
+    .mediaCard5 {
+        background: url("https://cdn.awsli.com.br/2500x2500/934/934817/produto/215769064/marmita1vacaatolada-f7g1x4390g.jpg") center/cover;
+        height: 300px;   
+        width: 300px;
+        border-radius: 20px; 
+     }
+    
+     .bottoCard5{
+       padding: 20px; 
+     }
+    .actions5:hover {
+        background-color: rgb(31, 187, 31);
+    }
+    section{
+        scroll-behavior: smooth;
+    }
+    .actions5 {
+       background-color: green;
+       color: #fff;
+       width: 260px;
+       border-radius: 15px;
+       height: 30px;
+    }
+    .bottonText5 {
+        text-align: left;
+        font-size: 15pt;
+    }
+    .card6 {
+        background: #fff;
+        box-shadow: 0px 2px 15px #000;  
+        border-radius: 20px;
+        width: 300px ;
+        height: 560px;
+        margin-left:5%;
+    }
+    .mediaCard6 {
+        background: url("https://cdn.awsli.com.br/2500x2500/934/934817/produto/215769075/delicias-4-png-pgst3iqk99.png") center/cover;
+        height: 300px;   
+        width: 300px;
+        border-radius: 20px; 
+     }
+    
+     .bottoCard6 {
+       padding: 20px; 
+     }
+    .actions6:hover {
+        background-color: rgb(31, 187, 31);
+    }
+    .actions6 {
+       background-color: green;
+       color: #fff;
+       width: 260px;
+       border-radius: 15px;
+       height: 30px;
+    }
+    .bottonText6 {
+        text-align: left;
+        font-size: 15pt;
+    }
+ 
+
+    .card {
+        background: #fff;
+        box-shadow: 0px 2px 15px #000;  
+        border-radius: 20px;
+        width: 300px ;
+        height: 560px;
+       
+    }
+    .mediaCard {
+        background: url("https://cdn.awsli.com.br/2500x2500/934/934817/produto/124004123/da64103979.jpg") center/cover;
+        height: 300px;   
+        width: 300px;
+        border-radius: 20px; 
+     }
+    
+     .bottoCard {
+       padding: 20px; 
+     }
+    .actions:hover {
+        background-color: rgb(31, 187, 31);
+    }
+    .actions {
+       background-color: green;
+       color: #fff;
+       width: 260px;
+       border-radius: 15px;
+       height: 30px;
+    }
+    .bottonText2 {
+        text-align: left;
+        font-size: 15pt;
+    }
+ 
+   
+    .card2 {
+        background: #fff;
+        box-shadow: 0px 2px 15px #000;  
+        border-radius: 20px;
+        width: 300px ;
+        margin-left:5%;
+        height: 560px;
+    }
+   
+    .mediaCard2 {
+        background: url("https://cdn.awsli.com.br/2500x2500/934/934817/produto/208594308/marmita-carne-moidajpg-wpduye.jpg") center/cover;
+        height: 300px;   
+        width: 300px;
+        border-radius: 20px; 
+     }
+    
+     .bottoCard2 {
+       padding: 20px; 
+     }
+    .actions2:hover {
+        background-color: rgb(31, 187, 31);
+    }
+    .actions2 {
+       background-color: green;
+       color: #fff;
+       width: 260px;
+       border-radius: 15px;
+       height: 30px;
+    }
+    .bottonText {
+        text-align: left;
+        font-size: 15pt;
+    }
+   
+    .frase2 {
+        background-color:#ff3838 ;
+        color: #fff;
+        width:270px ;
+        height:40px;
+        border-radius: 35%;
+        margin-left: 63%;
+        font-size: 25pt;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .frase2:hover{
+        background-color: green;
+
+    }
+   
+    .card3 {
+        background: #fff;
+        box-shadow: 0px 2px 15px #000;  
+        border-radius: 20px;
+        width: 300px;
+        height: 560px;
+        margin-left:5%;
+        
+    }
+    .card-container {
+        display: flex;
+    }
+    .mediaCard3 {
+        background: url("https://cdn.awsli.com.br/2500x2500/934/934817/produto/186105574/613474f706.jpg") center/cover;
+        height: 300px;   
+        width: 300px;
+        border-radius: 20px; 
+     }
+    
+     .bottoCard3 {
+       padding: 20px; 
+     }
+    .actions3:hover {
+        background-color: rgb(31, 187, 31);
+    }
+    .bottonText3 {
+        font-size: 14pt;
+        text-align: left;
+    }
+    
+    .actions3 {
+       background-color: green;
+       color: #fff;
+       width: 260px;
+       border-radius: 15px;
+       height: 30px;
+    }
+    .fmar2 {
+        text-align: left;
+        margin-left: 8%;
+        font-size: 15pt;
+    } 
+    .mar1 {
+        width: 27vh;
+        margin-top: 6%;
+        margin-left: 3%;
+        border-radius: 10%;
+    }
+    .mar1 {
+        float: left;
+    }
+    .mar2 {
+        width: 27vh;
+        margin-left: 5%;
+        margin-top: 6%;
+        border-radius: 10%;
+    }
+    .mar3 {
+        width: 27vh;
+        margin-left: 5%;
+        margin-top: 6%;
+        border-radius: 10%;
+    }
+    h1 {
+        font-size: 30pt;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #ff6c6c;
+  }
+    .imagens-clicaveis {
+        width: 45%;
+        margin-left: 3%;
+      
+        }
+    
+    .fras1 {
+        text-align: center;
+        font-size: 20pt;  
+        padding: 4%;
+        
+    }
+    .imagens-clicaveis{
+        float: left;
+    }
+    
+    nav ul li {
+       text-align: left;
+      
+    }
+    p {
+        font-size: 18pt;
+        text-align: center;
+    }
+  
+    section {
+        height:800px;
+        width: 1200px;
+        float:left;
+        padding:5px;
+        background-color:rgb(252, 241, 240) ;
+    }
+
+    footer {
+        width: 100%;
+        height: 8%;
+        background-color: rgb(252, 158, 158);
+        color: rgb(0, 0, 0);
+        clear: both;
+        text-align: center;
+        padding: 5px;
+    }

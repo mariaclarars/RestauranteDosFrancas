@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+</head>
+<body>
+    <h1>Jogo da Velha</h1>
+    <script>
+        let board = [
+            ['', '', ''],
+            ['', '', ''],
+            ['', '', '']
+        ];
+        let currentPlayer = 'X';
+
+        function printBoard() {
+            console.clear();
+            console.log(`${board[0][0]} | ${board[0][1]} | ${board[0][2]}`);
+            console.log('--+---+--');
+            console.log(`${board[1][0]} | ${board[1][1]} | ${board[1][2]}`);
+            console.log('--+---+--');
+            console.log(`${board[2][0]} | ${board[2][1]} | ${board[2][2]}`);
+        }
+
+        function checkWinner() {
+            // Verificando linhas, colunas e diagonais
+            for (let i = 0; i < 3; i++) {
+                if (board[i][0] === board[i][1] && board[i][1] === board[i][2] && board[i][0] !== '') {
+                    return board[i][0]; // Vencedor encontrado na linha
+                }
+                if (board[0][i] === board[1][i] && board[1][i] === board[2][i] && board[0][i] !== '') {
+                    return board[0][i]; // Vencedor encontrado na coluna
+                }
+            }
+
+            // Verificando diagonais
+            if (board[0][0] === board[1][1] && board[1][1] === board[2][2] && board[0][0] !== '') {
+                return board[0][0];
+            }
+            if (board[0][2] === board[1][1] && board[1][1] === board[2][0] && board[0][2] !== '') {
+                return board[0][2];
+            }
+
+            // Verificando empate
+            if (board.flat().every(cell => cell !== '')) {
+                return 'Empate';
+            }
+
+            return null; // Jogo ainda não terminou
+        }
+
+        function game() {
+            printBoard();
+            let row = prompt(`Jogador ${currentPlayer}, escolha a linha (0, 1 ou 2):`);
+            let col = prompt(`Jogador ${currentPlayer}, escolha a coluna (0, 1 ou 2):`);
+
+            row = parseInt(row);
+            col = parseInt(col);
+
+            // Verificando se a entrada é válida
+            if (isNaN(row) || isNaN(col) || row < 0 || row > 2 || col < 0 || col > 2 || board[row][col] !== '') {
+                alert("Movimento inválido! Tente novamente.");
+                game();
+                return;
+            }
+
+            // Colocando a jogada no tabuleiro
+            board[row][col] = currentPlayer;
+
+            // Verificando se há um vencedor ou empate
+            let winner = checkWinner();
+
+            if (winner) {
+                printBoard();
+                if (winner === 'Empate') {
+                    alert("Empate! O jogo terminou sem vencedor.");
+                } else {
+                    alert(`Jogador ${winner} venceu!`);
+                }
+
+                let playAgain = confirm("Quer jogar novamente?");
+                if (playAgain) {
+                    board = [['', '', ''], ['', '', ''], ['', '', '']];
+                    currentPlayer = 'X';
+                    game(); // Reinicia o jogo
+                }
+                return;
+            }
+
+            // Alterna o jogador
+            currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
+            game(); // Continuar o jogo
+        }
+
+        game(); // Inicia o jogo
+    </script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo da Velha</title>
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+
+    <head>
+        <meta charset="8751-2">
+        <link rel="shortcut icon" href="logo.ico.png" type="x-icon">
+        <link rel="stylesheet" href="estilo.css">
+        <title>Fit</title>
+
+        <style>
+            .card {
+                width: 100px;
+                height: 100px;
+                display: inline-block;
+                background-color: #ce8bfa;
+                margin: 5px;
+                text-align: center;
+                vertical-align: middle;
+                background-size: cover;
+                /* Ajusta o tamanho da imagem para cobrir o cartão */
+                background-position: center;
+                /* Centraliza a imagem no cartão */
+            }
+
+            #centro {
+                text-align: center;
+                background: rgb(255, 221, 227);
+            }
+
+
+            #resetButton {
+                margin-top: 2%;
+                background-color: rgb(184, 184, 253);
+            }
+
+            #memoria {
+                font-family: 'Brush Script MT';
+                font-size: 30pt;
+                color: rgb(0, 0, 0);
+                text-decoration: underline;
+            }
+
+            #volt {
+                text-align: left;
+
+                text-decoration: none;
+                background-color: rgb(179, 208, 241);
+                color: black;
+            }
+
+            #volta {
+                background-color: rgb(179, 208, 241);
+                text-align: right;
+                margin-left: 19%;
+            }
+
+            a {
+
+                color: black;
+                text-decoration: none;
+            }
+
+            .imagens-clicaveis {
+                margin: 0 100px;
+                transition-duration: 0.5s;
+                width: 500px;
+
+            }
+
+            .imagens-clicaveis:hover {
+                transform: scale(1.05);
+                box-shadow: 5px 5px 10px 0px #0008;
+                border-radius: 30px;
+            }
+
+            #outrop {
+                font-size: 15pt;
+            }
+
+            #colorBox {
+                width: 100px;
+                height: 100px;
+                margin: 50px auto;
+                background-color: grey;
+            }
+
+            body {
+                text-align: center;
+                background: rgb(255, 221, 227);
+            }
+
+            #score {
+                text-align: center;
+                font-size: 24px;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
+
+            .board {
+                display: grid;
+                grid-template-columns: repeat(3, 100px);
+                grid-gap: 10px;
+                justify-content: center;
+            }
+
+            .cell {
+                width: 100px;
+                height: 100px;
+                font-size: 36px;
+                text-align: center;
+                line-height: 100px;
+                border: 2px solid #000;
+                cursor: pointer;
+            }
+
+            button {
+                padding: 10px 20px;
+                margin-top: 20px;
+                font-size: 16px;
+            }
+
+            #volt {
+            text-align: left;
+            
+            text-decoration: none;
+            background-color: rgb(179, 208, 241);
+            color: black;
+        }
+
+        #volta {
+            background-color:rgb(179, 208, 241);
+            text-align: right;
+            margin-left: 19%;
+        }
+
+        </style>
+
+        </style>
+    </head>
+
+<body>
+
+    <header>
+        <a href="index.html"><img class="lo" src="logo.ico.png" alt="logo"></a>
+        <div class="search-box">
+            <input type="text" class="search-text" placeholder="Pesquisar...">
+            <a class="search-btn">
+                <img class="loupe-blue" src="./loupe-blue.svg.svg" alt="" width="30px" height="25px">
+                <img class="loupe-white" src="./loupe-white.svg.svg" alt="" width="30px" height="25px">
+            </a>
+        </div>
+
+
+
+
+        <a class="local"
+            href="https://www.google.com.br/maps/place/R.+Francisco+Marconi,+331+-+Jardim+Aeroporto+I,+Franca+-+SP,+14404-063/@-20.5759786,-47.3831049,17z/data=!4m6!3m5!1s0x94b0a8d979a65237:0xc10e941c05e0a3e1!8m2!3d-20.5759089!4d-47.3830941!16s%2Fg%2F11s9b0wz5x?entry=ttu"
+            target="_blank">
+            <img class="local" src="https://cdn-icons-png.flaticon.com/512/106/106121.png" alt="local"></a>
+
+        <a href="login.html"><img id="usu"
+                src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png"
+                alt="usu"></a>
+
+        <div id="botao-sacola">
+            <div>
+                <img src="sacola.png" alt="sacola" id="sacola-img">
+            </div>
+            <div>
+                <p id="outrop">Sua Sacola</p>
+            </div>
+        </div>
+
+        <a href="https://www.facebook.com/profile.php?id=100005711013107" target="_blank"><img
+                src="https://www.pngplay.com/wp-content/uploads/9/Facebook-Logo-Transparent-Background.png"
+                alt="img"></a>
+        <a href="https://wa.me/5516991452251" target="_blank"><img class="wh"
+                src="https://www.pngplay.com/wp-content/uploads/12/WhatsApp-Logo-Transparent-Image.png" alt="img2"></a>
+        <a href="https://www.instagram.com/martasilva445?igsh=cHdkNGhtODltc3Nz" target="_blank"><img class="ins"
+                src="http://pluspng.com/img-png/instagram-icon-png-instagram-icon-1600.png" alt="img3">
+        </a>
+    </header>
+
+
+    </head>
+
+    <body>
+        <h1>Jogo da Velha</h1>
+        <div class="board" id="board"></div>
+        <button onclick="resetGame()">Reiniciar Jogo</button>
+        <p id="status"></p>
+
+        <script>
+            let currentPlayer = 'X';
+            let gameBoard = ['', '', '', '', '', '', '', '', ''];
+            const boardElement = document.getElementById('board');
+            const statusElement = document.getElementById('status');
+
+            function initializeBoard() {
+                boardElement.innerHTML = '';
+                gameBoard.forEach((cell, index) => {
+                    const cellElement = document.createElement('div');
+                    cellElement.className = 'cell';
+                    cellElement.textContent = cell;
+                    cellElement.onclick = () => makeMove(index);
+                    boardElement.appendChild(cellElement);
+                });
+                statusElement.textContent = `Vez de ${currentPlayer}`;
+            }
+
+            function makeMove(index) {
+                if (gameBoard[index] === '') {
+                    gameBoard[index] = currentPlayer;
+                    checkWinner();
+                    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+                    initializeBoard();
+                }
+            }
+
+            function checkWinner() {
+                const winPatterns = [
+                    [0, 1, 2], [3, 4, 5], [6, 7, 8],  // Horizontais
+                    [0, 3, 6], [1, 4, 7], [2, 5, 8],  // Verticais
+                    [0, 4, 8], [2, 4, 6]              // Diagonais
+                ];
+
+                for (let pattern of winPatterns) {
+                    const [a, b, c] = pattern;
+                    if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) {
+                        statusElement.textContent = `${currentPlayer} venceu!`;
+                        return;
+                    }
+                }
+
+                if (!gameBoard.includes('')) {
+                    statusElement.textContent = 'Empate!';
+                }
+            }
+
+            function resetGame() {
+                gameBoard = ['', '', '', '', '', '', '', '', ''];
+                currentPlayer = 'X';
+                initializeBoard();
+            }
+
+            initializeBoard();
+        </script>
+        <button id="volt"><a href="indexMa3.html">VOLTAR</a></button>
+        <button id="volta"><a href="indexMa5.html">PRÓXIMO</a></button>
+  </body>
+
+</html>
